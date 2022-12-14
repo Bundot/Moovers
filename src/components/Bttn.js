@@ -7,7 +7,7 @@ export default function Bttn({text, onPress}) {
     return (
         <View style={styles.container}>
             <TouchableOpacity style={styles.Bttn} onPress={onPress}> 
-               <Txt font={"InterBold"} style={{color:"white", fontSize: 16}}>{text}</Txt>
+               <Txt font={"PoppinsRegulars"} style={{color:"white", fontSize: 16}}>{text}</Txt>
             </TouchableOpacity>
             </View>
     )

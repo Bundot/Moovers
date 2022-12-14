@@ -5,7 +5,10 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-
+//import HomePage from '../screens/HomePage';
+//import Chat from '../screens/Chat';
+//import Orders from '../screens/Orders';
+//import Profile from '../screens/Profile';
 
 
 function HomeP(){
