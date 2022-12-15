@@ -1,5 +1,6 @@
 import { View, Image} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import SwipeNavOne from "./SwipeNavOne";
 import Txt from "./Txt";
 
 export default function OnboardingOne(){
@@ -19,6 +20,9 @@ export default function OnboardingOne(){
             </View>
             <View style={{alignItems:"center", marginHorizontal: 39}}>
                 <Txt font={"PoppinsRegular"} style={{ fontSize: 16}}>will get to your location as possible</Txt>
+            </View>
+            <View style={{marginTop: 50, alignItems:"center"}}>
+            <SwipeNavOne/>
             </View>
         </SafeAreaView>
     )

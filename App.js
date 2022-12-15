@@ -12,6 +12,8 @@ import OnboardingTwo from './src/components/OnboardingTwo';
 import OnboardingThree from './src/components/OnboardingThree';
 import StartButton from './src/components/StartButton';
 import WelcomeScreen from './src/Screens/WelcomeScreen';
+//import SwipeNav from './src/components/SwipeNavOne';
+import SwipeNavOne from './src/components/SwipeNavOne';
 
 
 const Stack= createStackNavigator();
@@ -19,7 +21,7 @@ const Stack= createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='OnboardingOne' screenOptions={{headerShown: false}}>
+      <Stack.Navigator initialRouteName='OnboardingThree' screenOptions={{headerShown: false}}>
         <Stack.Screen name='Navigation' component={Navigation} />
         <Stack.Screen name='PasswordInputs' component={PasswordInputs} />
         <Stack.Screen name='InboxCard' component={InboxCard}/>
@@ -28,6 +30,7 @@ export default function App() {
         <Stack.Screen name='OnboardingThree' component={OnboardingThree}/>
         <Stack.Screen name='StartButton' component={StartButton}/>
         <Stack.Screen name='WelcomeScreen' component={WelcomeScreen}/>
+        <Stack.Screen name='SwipeNav' component={SwipeNavOne}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

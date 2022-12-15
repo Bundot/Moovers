@@ -1,5 +1,6 @@
 import { View, Image } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import SwipeNavThree from "./SwipeNavThree";
 import Txt from "./Txt";
 
 export default function OnboardingThree(){
@@ -20,6 +21,9 @@ export default function OnboardingThree(){
         <View style={{alignItems:"center", paddingHorizontal: 39}}>
             <Txt font={"PoppinsRegular"} style={{ fontSize: 16}}>With Movers</Txt>
         </View>
+        <View style={{marginTop: 50, alignItems:"center"}}>
+            <SwipeNavThree/>
+            </View>
     </SafeAreaView>
     )
 }

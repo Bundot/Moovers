@@ -1,5 +1,6 @@
 import { View, Image } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import SwipeNavTwo from "./SwipeNavTwo";
 import Txt from "./Txt";
 
 export default function OnboardingTwo(){
@@ -20,6 +21,9 @@ export default function OnboardingTwo(){
         <View style={{alignItems:"center",paddingHorizontal: 39}}>
             <Txt font={"PoppinsRegular"} style={{ fontSize: 16}}>affordable service package</Txt>
         </View>
+        <View style={{marginTop: 50, alignItems:"center"}}>
+            <SwipeNavTwo/>
+            </View>
     </SafeAreaView>
     )
 }
