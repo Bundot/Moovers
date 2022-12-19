@@ -16,6 +16,8 @@ import WelcomeScreen from './src/Screens/WelcomeScreen';
 import SwipeNavOne from './src/components/SwipeNavOne';
 import TestingSwippers from './src/Tests/TestingSwippers';
 import WelcomeSlides from './src/Screens/WelcomeSlides';
+import UsersInput from './src/components/UsersInput';
+import UsersPasswordInput from './src/components/UsersPasswordInput';
 
 
 
@@ -24,7 +26,7 @@ const Stack= createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='WelcomeSlides' screenOptions={{headerShown: false}}>
+      <Stack.Navigator initialRouteName='UsersPasswordInput' screenOptions={{headerShown: false}}>
         <Stack.Screen name='Navigation' component={Navigation} />
         <Stack.Screen name='PasswordInputs' component={PasswordInputs} />
         <Stack.Screen name='InboxCard' component={InboxCard}/>
@@ -36,6 +38,8 @@ export default function App() {
         <Stack.Screen name='SwipeNav' component={SwipeNavOne}/>
         <Stack.Screen name='TestingSwippers' component={TestingSwippers}/>
         <Stack.Screen name='WelcomeSlides' component={WelcomeSlides}/>
+        <Stack.Screen name='UsersInput' component={UsersInput}/>
+        <Stack.Screen name='UsersPasswordInput' component={UsersPasswordInput} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -1,6 +1,6 @@
 import React from "react";
 import { Text, TouchableOpacity, View } from "react-native";
-import Swiper from "react-native-web-swiper";
+import Swiper from "react-native-swiper";
 import OnboardingOne from "../components/OnboardingOne";
 import OnboardingThree from "../components/OnboardingThree";
 import OnboardingTwo from "../components/OnboardingTwo";
@@ -14,13 +14,10 @@ export default class WelcomeSlides extends React.Component {
                     //vertical
                     //loop
                     //timeout={-2.5}
-                    
-                    controlsProps={{
-                     sty
-                      dotActiveStyle: { backgroundColor: '#593761', width: 40},
-                      dotsWrapperStyle:{marginBottom: 150 }
-                    }}
-                  >
+                    loop={false}
+                    dotStyle={{width: 40, marginTop:-400}}
+                    activeDotStyle={{backgroundColor:"#593761", width: 40, marginTop:-400 }}
+                    >
                       <View style={{flex:1}}>
                           <OnboardingOne/>
                       </View>
@@ -29,9 +26,6 @@ export default class WelcomeSlides extends React.Component {
                       </View>
                       <View style={{flex:1}}>
                           <OnboardingThree/>
-                      </View>
-                      <View style={{flex:1}}>
-                          <WelcomeScreen/>
                       </View>
                   </Swiper>
               </View>

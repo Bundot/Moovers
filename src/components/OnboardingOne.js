@@ -22,7 +22,6 @@ export default function OnboardingOne(){
                 <Txt font={"PoppinsRegular"} style={{ fontSize: 16}}>will get to your location as possible</Txt>
             </View>
             <View style={{marginTop: 50, alignItems:"center"}}>
-            <SwipeNavOne/>
             </View>
         </SafeAreaView>
     )

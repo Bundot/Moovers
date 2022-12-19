@@ -22,7 +22,6 @@ export default function OnboardingTwo(){
             <Txt font={"PoppinsRegular"} style={{ fontSize: 16}}>affordable service package</Txt>
         </View>
         <View style={{marginTop: 50, alignItems:"center"}}>
-            <SwipeNavTwo/>
             </View>
     </SafeAreaView>
     )

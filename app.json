@@ -7,9 +7,9 @@
     "icon": "./assets/icon.png",
     "userInterfaceStyle": "light",
     "splash": {
-      "image": "./assets/images/MooverLogo-removebg-preview.png",
+      "image": "./assets/images/NewLogo.png",
       "resizeMode": "contain",
-      "backgroundColor": "#4361EE"
+      "backgroundColor": "#FFFFFF"
     },
     "updates": {
       "fallbackToCacheTimeout": 0

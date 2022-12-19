@@ -22,7 +22,6 @@ export default function OnboardingThree(){
             <Txt font={"PoppinsRegular"} style={{ fontSize: 16}}>With Movers</Txt>
         </View>
         <View style={{marginTop: 50, alignItems:"center"}}>
-            <SwipeNavThree/>
             </View>
     </SafeAreaView>
     )
