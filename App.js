@@ -22,6 +22,8 @@ import LoginScreen from './src/Screens/LoginScreen';
 import LinkButton from './src/components/LinkButton';
 import CreateAccountScreen from './src/Screens/CreateAccountScreen';
 import MailLinkSquare from './src/components/MailLinkSquare';
+import ResetPassword from './src/Screens/ResetPassword';
+import Verification from './src/Screens/Verification';
 
 
 
@@ -30,7 +32,7 @@ const Stack= createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='CreateAccountScreen' screenOptions={{headerShown: false}}>
+      <Stack.Navigator initialRouteName='Verification' screenOptions={{headerShown: false}}>
         <Stack.Screen name='Navigation' component={Navigation} />
         <Stack.Screen name='PasswordInputs' component={PasswordInputs} />
         <Stack.Screen name='InboxCard' component={InboxCard}/>
@@ -48,6 +50,8 @@ export default function App() {
         <Stack.Screen name='LinkButton' component={LinkButton}/>
         <Stack.Screen name='CreateAccountScreen' component={CreateAccountScreen}/>
         <Stack.Screen name='MailLinkSquare' component={MailLinkSquare}/>
+        <Stack.Screen name='ResetPassword' component={ResetPassword}/>
+        <Stack.Screen name='Verification' component={Verification}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

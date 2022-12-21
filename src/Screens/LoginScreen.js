@@ -1,4 +1,4 @@
-import {View, Text, TouchableOpacity} from 'react-native';
+import {View, Text, TouchableOpacity, ScrollView} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Txt from '../components/Txt';
 import { Entypo } from '@expo/vector-icons';
@@ -12,6 +12,7 @@ import OrLine from '../components/OrLine';
 export default function LoginScreen(){
     return(
             <SafeAreaView style={{paddingHorizontal: 34}}>
+                <ScrollView showsVerticalScrollIndicator={false}>
                 <View style={{height: 100}}>
             <View style={{marginTop:59}}>         
               <Txt font={"PoppinsBold"} style={{fontSize: 30, color:"#593761", alignSelf:"center" }}>Login</Txt>  
@@ -33,6 +34,7 @@ export default function LoginScreen(){
                 <LinkButton image={require('./../../assets/images/appleMailIcon.png')} text={"Continue With Apple"}/>
                 <LinkButton image={require('./../../assets/images/smallGmailIcon.png')} text={"Sign in with Google"}/>
               </View>
+              </ScrollView>
             </SafeAreaView>
     )
 }
