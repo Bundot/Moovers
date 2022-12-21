@@ -18,6 +18,10 @@ import TestingSwippers from './src/Tests/TestingSwippers';
 import WelcomeSlides from './src/Screens/WelcomeSlides';
 import UsersInput from './src/components/UsersInput';
 import UsersPasswordInput from './src/components/UsersPasswordInput';
+import LoginScreen from './src/Screens/LoginScreen';
+import LinkButton from './src/components/LinkButton';
+import CreateAccountScreen from './src/Screens/CreateAccountScreen';
+import MailLinkSquare from './src/components/MailLinkSquare';
 
 
 
@@ -26,7 +30,7 @@ const Stack= createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='UsersPasswordInput' screenOptions={{headerShown: false}}>
+      <Stack.Navigator initialRouteName='CreateAccountScreen' screenOptions={{headerShown: false}}>
         <Stack.Screen name='Navigation' component={Navigation} />
         <Stack.Screen name='PasswordInputs' component={PasswordInputs} />
         <Stack.Screen name='InboxCard' component={InboxCard}/>
@@ -40,6 +44,10 @@ export default function App() {
         <Stack.Screen name='WelcomeSlides' component={WelcomeSlides}/>
         <Stack.Screen name='UsersInput' component={UsersInput}/>
         <Stack.Screen name='UsersPasswordInput' component={UsersPasswordInput} />
+        <Stack.Screen name='LoginScreen' component={LoginScreen}/>
+        <Stack.Screen name='LinkButton' component={LinkButton}/>
+        <Stack.Screen name='CreateAccountScreen' component={CreateAccountScreen}/>
+        <Stack.Screen name='MailLinkSquare' component={MailLinkSquare}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

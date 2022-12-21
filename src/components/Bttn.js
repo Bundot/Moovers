@@ -7,7 +7,7 @@ export default function Bttn({text, onPress}) {
     return (
         <View style={styles.container}>
             <TouchableOpacity style={styles.Bttn} onPress={onPress}> 
-               <Txt font={"PoppinsRegulars"} style={{color:"white", fontSize: 16}}>{text}</Txt>
+               <Txt font={"PoppinsRegular"} style={{color:"white", fontSize: 16}}>{text}</Txt>
             </TouchableOpacity>
             </View>
     )
@@ -22,10 +22,11 @@ const styles= StyleSheet.create({
     Bttn:{
         backgroundColor: "#593761",
         height: 52,
-        width: 290,
+        //width: 290,
         borderRadius: 15,
         alignItems: "center",
-        justifyContent: "center"
+        justifyContent: "center",
+        marginTop: 30
     },
     
 });
