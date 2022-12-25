@@ -7,8 +7,20 @@ import UsersPasswordInput from '../components/UsersPasswordInput';
 import Bttn from '../components/Bttn';
 import OrLine from '../components/OrLine';
 import MailLinkSquare from '../components/MailLinkSquare';
+import {Form, Formik} from 'formik';
+import * as Yup from 'yup';
 
-export default function CreateAccountScreen(){
+const validationSchema = Yup.object().shape({
+    fullname: Yup.string().required("Field Is Required").label('Full Name'),
+    email: Yup.string().required("Field Is Required").email("Email Format Is name@email.com").label('Email Address'),
+    phoneNumber: Yup.number("Phone Number Field Only accepts numbers").required("Field Is Required"),
+    password: Yup.string().required("Field Is Required").max(10, "Password should be less than 11 characters").min(8, "Password Should be more than 4 characters").label("Password"),
+})
+
+export default function CreateAccountScreen({ navigation }){
+    const onFormSubmit = () =>{
+        navigation.navigate("LoginScreen")
+    }
     return (
         <SafeAreaView style={{paddingHorizontal: 34}}>
             <ScrollView showsVerticalScrollIndicator={false}>
@@ -19,14 +31,26 @@ export default function CreateAccountScreen(){
               </View>
               <Entypo name="chevron-thin-left" size={15} color="#2D264B" style={{ width: 30, marginTop: -50, marginLeft: 5}}/>
               </View>
-              <TouchableOpacity  style={{marginTop: 50}}>
+              <TouchableOpacity  style={{marginTop: 50}} onPress={onFormSubmit}>
               <Txt font={"PoppinsBold"} style={{fontSize:15, color:"#D27203", alignSelf:"flex-end"}}>Sign Up</Txt>
               </TouchableOpacity>
-              <UsersInput image={require('./../../assets/images/profileIcon.png')}/>
-              <UsersInput image={require('./../../assets/images/emailIcon.png')}/>
-              <UsersInput image={require('./../../assets/images/phoneCallIcon.png')}/>
-              <UsersPasswordInput/>
-              <Bttn text={"Sign Up"}/>
+              <Formik initialValues={{fullname:"", email:"", phoneNumber:"", phoneNumber:""}}
+                        onSubmit={onFormSubmit}
+                        validationSchema={validationSchema}>
+                            {({handleChange, handleSubmit, errors, touched})=>(
+                        <>
+                        <UsersInput image={require('./../../assets/images/profileIcon.png')} onChangeText={handleChange("fullname")}/>
+                        <Text style={{color: "red",fontSize: 12,fontWeight: "bold",letterSpacing: 0.2}}>{touched.fullname && errors.fullname}</Text>
+                        <UsersInput image={require('./../../assets/images/emailIcon.png')} onChangeText={handleChange("email")}/>
+                        <Text style={{color: "red",fontSize: 12,fontWeight: "bold",letterSpacing: 0.2}}>{touched.email && errors.email}</Text>
+                        <UsersInput image={require('./../../assets/images/phoneCallIcon.png')} onChangeText={handleChange("phoneNumber")}/>
+                        <Text style={{color: "red",fontSize: 12,fontWeight: "bold",letterSpacing: 0.2}}>{touched.phoneNumber && errors.phoneNumber}</Text>
+                        <UsersPasswordInput onChangeText={handleChange("password")}/>
+                        <Text style={{color: "red",fontSize: 12,fontWeight: "bold",letterSpacing: 0.2}}>{touched.password && errors.password}</Text>
+                        <Bttn text={"Sign Up"} onPress={handleSubmit}/>
+                        </>
+                       )} 
+              </Formik>
               <View style={{marginTop: 20}}>
               <Txt font={"PoppinsRegular"} style={{fontSize:14}}>By Signing up, i accept the
               <Txt font={"PoppinsRegular"} style={{fontSize:14, color:"#D27203"}}> Terms 

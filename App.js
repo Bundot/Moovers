@@ -2,7 +2,6 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Bttn from './src/components/Bttn';
 import ChatCard from './src/components/ChatCard';
 import Navigation from './src/components/Navigation';
 import PasswordInputs from './src/components/PasswordInputs';
@@ -28,6 +27,7 @@ import TestingFormFields from './src/Tests/TestingFormFields';
 import VerificationInputs from './src/components/VerificationInputs';
 import NewPassword from './src/Screens/NewPassword';
 import HomeScreen from './src/Screens/HomeScreen';
+import Notification from './src/Screens/Notification';
 
 
 
@@ -36,8 +36,7 @@ const Stack= createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='HomeScreen' screenOptions={{headerShown: false}}>
-        <Stack.Screen name='Navigation' component={Navigation} />
+      <Stack.Navigator initialRouteName='Notification' screenOptions={{headerShown: false}}>
         <Stack.Screen name='PasswordInputs' component={PasswordInputs} />
         <Stack.Screen name='InboxCard' component={InboxCard}/>
         <Stack.Screen name='OnboardingOne' component={OnboardingOne}/>
@@ -60,6 +59,7 @@ export default function App() {
         <Stack.Screen name='VerificationInputs' component={VerificationInputs}/>
         <Stack.Screen name='NewPassword' component={NewPassword}/>
         <Stack.Screen name='HomeScreen' component={HomeScreen}/>
+        <Stack.Screen name='Notification' component={Notification}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

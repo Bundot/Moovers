@@ -5,7 +5,7 @@ import Txt from './Txt';
 
 
 
-export default function UsersPasswordInput(){
+export default function UsersPasswordInput({onChangeText}){
     const [textHidden, setTextHidden] = useState(true);
 
     return(
@@ -14,7 +14,7 @@ export default function UsersPasswordInput(){
                <View style={{ height: 17, width: 17, marginLeft: 5, flexDirection:"row", alignSelf:"center"}}>
                 <Image source={require('./../../assets/images/passwordPadlockIcon.png')}/>
                </View>
-               <TextInput style={{marginLeft: 5, marginRight:10,fontSize:20, height:"100%", marginBottom: 50, width:"80%", borderRadius:10}} secureTextEntry={textHidden}/>
+               <TextInput style={{marginLeft: 5, marginRight:10,fontSize:20, height:"100%", marginBottom: 50, width:"80%", borderRadius:10}} onChangeText={onChangeText} secureTextEntry={textHidden}/>
                <TouchableOpacity onPress={ () => setTextHidden(!textHidden)} style={{alignSelf:"center", marginLeft:-5 }}>
                 <Image source={textHidden == true ? require('./../../assets/images/dontSeePasswordIcon.png') : require('./../../assets/images/seePasswordIcon.png')}/>
                </TouchableOpacity>
