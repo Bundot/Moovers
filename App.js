@@ -28,6 +28,10 @@ import VerificationInputs from './src/components/VerificationInputs';
 import NewPassword from './src/Screens/NewPassword';
 import HomeScreen from './src/Screens/HomeScreen';
 import Notification from './src/Screens/Notification';
+import Bookings from './src/Screens/Bookings';
+import Profile from './src/Screens/Profile';
+import AccountSettings from './src/Screens/AccountSettings';
+import ReferallAndCoupon from './src/Screens/ReferralAndCoupon';
 
 
 
@@ -36,7 +40,7 @@ const Stack= createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='Notification' screenOptions={{headerShown: false}}>
+      <Stack.Navigator initialRouteName='ReferallAndCoupon' screenOptions={{headerShown: false}}>
         <Stack.Screen name='PasswordInputs' component={PasswordInputs} />
         <Stack.Screen name='InboxCard' component={InboxCard}/>
         <Stack.Screen name='OnboardingOne' component={OnboardingOne}/>
@@ -60,6 +64,10 @@ export default function App() {
         <Stack.Screen name='NewPassword' component={NewPassword}/>
         <Stack.Screen name='HomeScreen' component={HomeScreen}/>
         <Stack.Screen name='Notification' component={Notification}/>
+        <Stack.Screen name='Bookings' component={Bookings}/>
+        <Stack.Screen name='Profile' component={Profile}/>
+        <Stack.Screen name='AccountSettings' component={AccountSettings}/>
+        <Stack.Screen name='ReferallAndCoupon' component={ReferallAndCoupon}/>
       </Stack.Navigator>
     </NavigationContainer>
   );
