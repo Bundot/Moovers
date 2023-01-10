@@ -4,8 +4,6 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import NotificationCards from "../components/NotificationCards";
 
 
-
-
 const actions = [{
     title: "You just ordered for a quicky service",
     details: "Click to track your order",

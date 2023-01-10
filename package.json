@@ -25,7 +25,8 @@
     "react-native-swiper": "^1.6.0",
     "react-native-web-swiper": "^2.2.4",
     "swiper": "^8.4.5",
-    "yup": "^0.32.11"
+    "yup": "^0.32.11",
+    "expo-linear-gradient": "~12.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"

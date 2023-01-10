@@ -1,9 +1,9 @@
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, Text, Image, StyleSheet, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { LinearGradient } from 'expo-linear-gradient';
 import Txt from "./Txt";
 
-export default function ReferAndEarnCard({colorza, colorzb,  offer, title,  couponCode, percentage, extraInfo}){
+export default function BankOffers({colorza, colorzb,  offer, title, cashback, transactionamount}){
     return(
         <SafeAreaView style={styles.container}>
             <View style={styles.containerb}>
@@ -12,7 +12,7 @@ export default function ReferAndEarnCard({colorza, colorzb,  offer, title,  coup
                 </LinearGradient> 
                 <View style={styles.containerd}>
                 <Txt font={"PoppinsBold"} style={styles.txtcontainera}>{title}</Txt>
-                <Txt font={"PoppinsRegular"} style={styles.txtcontainerb}>Use code {couponCode} and get {percentage} off {extraInfo}</Txt>
+                <Txt font={"PoppinsRegular"} style={styles.txtcontainerb}>Cash back up to {cashback} when you make up to {transactionamount}</Txt>
                 </View>
             </View>
         </SafeAreaView>

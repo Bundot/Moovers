@@ -1,14 +1,14 @@
-import { View, Image } from "react-native";
+import { View, Image, TouchableOpacity } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import SwipeNavThree from "./SwipeNavThree";
 import Txt from "./Txt";
 
-export default function OnboardingThree(){
+export default function OnboardingThree({navigation}){
     return(
         <SafeAreaView style={{paddingHorizontal: 26, backgroundColor:"white", flex: 1}}>
-        <View style={{alignItems:'flex-end', marginTop: 90}}>
+        <TouchableOpacity style={{alignItems:'flex-end', marginTop: 90}} onSubmit={()=> navigation.navigate('WelcomeScreen')}>
             <Txt font={"PoppinsBold"} style={{color:"#4361EE", fontSize: 14}}>Skip</Txt>
-        </View>
+        </TouchableOpacity>
         <View style={{alignItems:"center", marginTop: 32}}>
             <Image  resizeMethod="resize" source={require('./../../assets/images/onboarding3.png')} />
         </View>
