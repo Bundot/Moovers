@@ -6,7 +6,7 @@ import Txt from "./Txt";
 export default function OnboardingThree({navigation}){
     return(
         <SafeAreaView style={{paddingHorizontal: 26, backgroundColor:"white", flex: 1}}>
-        <TouchableOpacity style={{alignItems:'flex-end', marginTop: 90}} onSubmit={()=> navigation.navigate('WelcomeScreen')}>
+        <TouchableOpacity style={{alignItems:'flex-end', marginTop: 90}} onSubmit={ ()=> navigation.navigate('WelcomeScreen')}>
             <Txt font={"PoppinsBold"} style={{color:"#4361EE", fontSize: 14}}>Skip</Txt>
         </TouchableOpacity>
         <View style={{alignItems:"center", marginTop: 32}}>

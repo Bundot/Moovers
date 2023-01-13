@@ -1,14 +1,15 @@
 import { View, Image } from "react-native";
+import { TouchableOpacity } from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
 import SwipeNavTwo from "./SwipeNavTwo";
 import Txt from "./Txt";
 
-export default function OnboardingTwo(){
+export default function OnboardingTwo({navigation}){
     return(
         <SafeAreaView style={{paddingHorizontal: 26, backgroundColor:"white", flex: 1}}>
-        <View style={{alignItems:'flex-end', marginTop: 90}}>
-            <Txt font={"PoppinsBold"} style={{color:"#4361EE", fontSize: 14}}>Skip</Txt>
-        </View>
+        <TouchableOpacity style={{alignItems:'flex-end', marginTop: 90}}>
+            <Txt font={"PoppinsBold"} style={{color:"#4361EE", fontSize: 14}} onSubmit={ ()=> navigation.navigate('WelcomeScreen')}>Skip</Txt>
+        </TouchableOpacity>
         <View style={{alignItems:"center", marginTop: 32}}>
             <Image  resizeMethod="resize" source={require('./../../assets/images/onboarding2.png')} />
         </View>

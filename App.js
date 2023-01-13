@@ -32,7 +32,7 @@ const Stack= createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='WelcomeSlides' screenOptions={{headerShown: false}}> 
+      <Stack.Navigator initialRouteName='SingleDeliveryScreen' screenOptions={{headerShown: false}}> 
         <Stack.Screen name='WelcomeScreen' component={WelcomeScreen}/>
         <Stack.Screen name='SwipeNav' component={SwipeNavOne}/>
         <Stack.Screen name='TestingSwippers' component={TestingSwippers}/>
