@@ -7,7 +7,7 @@ import TopLineNav from "../components/TopLineNav";
 
 export default function AccountSettings(){
     return(
-        <SafeAreaView>
+        <SafeAreaView style={{backgroundColor:"#EEF3F5"}}>
             <ScrollView>
             <TopLineNav text={"Account Settings"}/>
             <View style={{alignSelf:"center"}}>

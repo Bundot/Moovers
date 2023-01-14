@@ -7,7 +7,7 @@ import UsersPasswordInput from '../components/UsersPasswordInput';
 
 export default function NewPassword(){
     return(
-        <SafeAreaView style={{flex:1, backgroundColor:"white", paddingHorizontal:30}}>
+        <SafeAreaView style={{flex:1, backgroundColor:"#EEF3F5", paddingHorizontal:30}}>
             <ScrollView showsVerticalScrollIndicator={false}>
             <Txt font={"PoppinsBold"} style={{alignSelf:"center", fontSize: 30, color:"#593761", marginTop:65}}>New Password</Txt>
             <Image source={require('./../../assets/images/newPasswordImage.png')} style={{alignSelf:"center"}}/>

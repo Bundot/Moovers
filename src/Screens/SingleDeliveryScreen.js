@@ -13,7 +13,7 @@ import Bttn from "../components/Bttn";
 
 export default function SingleDeliveryScreen(){
     return(
-        <SafeAreaView style={{marginBottom:10}}>
+        <SafeAreaView style={{marginBottom:10, backgroundColor:"#EEF3F5"}}>
             <ScrollView>
             <TopLineNav text={"Courier - Single Delivery"}/>
             <View style={{paddingHorizontal:25}}>

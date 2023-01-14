@@ -11,7 +11,7 @@ export default function Verification({refs, onChangeText}){
     const inputTwo = useRef();
     
     return(
-        <SafeAreaView style={{paddingHorizontal:30}}>
+        <SafeAreaView style={{paddingHorizontal:30, backgroundColor:"#EEF3F5"}}>
             <ScrollView showsVerticalScrollIndicator={false}>
             <View>
                 <Txt font={"PoppinsBold"} style={{alignSelf:"center", fontSize: 30, color:"#593761", marginTop:65}}>Verification</Txt>

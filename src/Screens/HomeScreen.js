@@ -8,7 +8,7 @@ import Txt from '../components/Txt';
 
 export default function HomeScreen(){
     return(
-        <SafeAreaView style={{paddingBottom: 20}}>
+        <SafeAreaView style={{backgroundColor:"#EEF3F5", paddingBottom: 20}}>
             <ScrollView showsVerticalScrollIndicator={false}>
             <TopLine image={require('./../../assets/images/locationIcon.png')} address={"New Nyanya, Phase IV"} state={"Nassarawa State"}/>
             <View style={{paddingHorizontal: 20}}>

@@ -22,7 +22,7 @@ export default function CreateAccountScreen({ navigation }){
         navigation.navigate("LoginScreen")
     }
     return (
-        <SafeAreaView style={{paddingHorizontal: 34}}>
+        <SafeAreaView style={{backgroundColor:"#EEF3F5", paddingHorizontal: 34}}>
             <ScrollView showsVerticalScrollIndicator={false}>
             <View style={{height: 100}}>
             <View style={{marginTop:59}}>         

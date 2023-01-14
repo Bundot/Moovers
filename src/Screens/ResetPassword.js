@@ -7,7 +7,7 @@ import Bttn from "../components/Bttn";
 
 export default function ResetPassword(){
     return(
-        <SafeAreaView style={{flex:1, paddingHorizontal: 30, backgroundColor:"white"}}>
+        <SafeAreaView style={{flex:1, paddingHorizontal: 30, backgroundColor:"#EEF3F5"}}>
             <ScrollView showsVerticalScrollIndicator={false}>
              <View style={{height: 100}}>
             <View style={{marginTop:59}}>         

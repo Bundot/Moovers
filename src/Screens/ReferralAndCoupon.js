@@ -12,10 +12,10 @@ import Txt from "../components/Txt";
 // add padding Bottom
 export default function ReferallAndCoupon(){
     return(
-        <SafeAreaView style={{backgroundColor:"white", flex: 1 }}>
+        <SafeAreaView style={{backgroundColor:"#EEF3F5", flex: 1 }}>
             <ScrollView>
             <TopLineNav text={"Refer and Earn"}/>
-            <Image source={require('./../../assets/images/referPageImage.png')} style={{alignSelf:"center"}}/>
+            <Image source={require('./../../assets/images/referPageImagenobg.png')} style={{alignSelf:"center"}}/>
             <Txt font={"PoppinsRegular"} style={{alignSelf: "center", fontSize: 10}}>Invite your friend to Moover and earn coupons</Txt>
             <Txt font={"PoppinsRegular"} style={{alignSelf: "center", fontSize: 10}}>when they make their first bookings</Txt>
             <NewSearchBox/>

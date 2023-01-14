@@ -61,7 +61,8 @@ export default function LoginScreen({navigation}){
 
 const styles=StyleSheet.create({
   container: {
-    paddingHorizontal: 34
+    paddingHorizontal: 34,
+    backgroundColor:"#EEF3F5"
   },
 txtOne:{
   fontSize: 30,

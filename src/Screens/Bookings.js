@@ -6,7 +6,7 @@ import BookingsCard from "../components/BookingsCard";
 
 export default function Bookings(){
     return(
-        <SafeAreaView style={{backgroundColor:"white", flex:1}}>
+        <SafeAreaView style={{backgroundColor:"#EEF3F5", flex:1}}>
             <EmptyTopLine text={"My Bookings"}/>
             <BookingsCard image={require('./../../assets/images/courierNewImage.png')} text={"Courier"}/>
             <BookingsCard image={require('./../../assets/images/packersandmoversNewImage.png')} text={'Packers & Movers'}/>

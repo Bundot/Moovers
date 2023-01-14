@@ -24,6 +24,7 @@ import AccountSettings from './src/Screens/AccountSettings';
 import ReferallAndCoupon from './src/Screens/ReferralAndCoupon';
 import SingleDeliveryScreen from './src/Screens/SingleDeliveryScreen';
 import OnboardingThree from './src/components/OnboardingThree';
+import OrderSummary from './src/Screens/OrderSummary';
 
 
 
@@ -32,7 +33,7 @@ const Stack= createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='SingleDeliveryScreen' screenOptions={{headerShown: false}}> 
+      <Stack.Navigator initialRouteName='OrderSummary' screenOptions={{headerShown: false}}> 
         <Stack.Screen name='WelcomeScreen' component={WelcomeScreen}/>
         <Stack.Screen name='SwipeNav' component={SwipeNavOne}/>
         <Stack.Screen name='TestingSwippers' component={TestingSwippers}/>
@@ -53,6 +54,7 @@ export default function App() {
         <Stack.Screen name='Navigation' component={Navigation}/>
         <Stack.Screen name='SingleDeliveryScreen' component={SingleDeliveryScreen}/>
         <Stack.Screen name='OnboardingThree' component={OnboardingThree}/>
+        <Stack.Screen name='OrderSummary' component={OrderSummary}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -6,7 +6,7 @@ import Txt from "../components/Txt";
 
 export default function WelcomeScreen(){
     return(
-        <SafeAreaView style={{paddingHorizontal: 26, backgroundColor:"white", flex: 1}}>
+        <SafeAreaView style={{paddingHorizontal: 26, backgroundColor:"#EEF3F5", flex: 1}}>
         <View style={{alignItems:"center", marginTop: 200}}>
             <Image  resizeMethod="resize" source={require('./../../assets/images/welcomeScreen.png')} />
         </View>

@@ -10,7 +10,7 @@ import YesterdayNotificationFlatList from "../flatLists/YesterdayNotificationFla
 
 export default function Notification(){
     return(
-        <SafeAreaView>
+        <SafeAreaView style={{backgroundColor:"#EEF3F5"}}>
            <ScrollView>
               <TopLineNav text={"Notification"}/>
             <View style={{height: 80, borderWidth:1, borderColor:"#C0C0C0", paddingHorizontal:25, justifyContent:"center"}}>

@@ -9,7 +9,7 @@ import WelcomeScreen from "./WelcomeScreen";
 export default class WelcomeSlides extends React.Component {
     render() {
         return (
-              <View style={{flex: 1}}>
+              <View style={{backgroundColor:"#EEF3F5", flex: 1}}>
                   <Swiper
                     //vertical
                     //loop
