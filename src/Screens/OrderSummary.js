@@ -8,10 +8,12 @@ import DeliveryAddressSummary from "../components/DeliveryAddressSummary";
 import ParcelDetails from "../components/ParcelDetails";
 import ApplyOfferCard from "../components/ApplyOfferCard";
 import CostDetailsCard from "../components/CostDetailsCard";
+import PaymentMethodCard from "../components/PaymentMethodCard";
+import Bttn from "../components/Bttn";
 
 export default function OrderSummary(){
     return(
-        <SafeAreaView style={{backgroundColor:"#EEF3F5"}}>
+        <SafeAreaView style={{backgroundColor:"#EEF3F5", paddingBottom: 20}}>
             <ScrollView>
            <TopLineNav text={"Order Summary"}/>
            <View style={{paddingHorizontal:26}}>
@@ -34,6 +36,8 @@ export default function OrderSummary(){
            <Txt font={"PoppinsBold"} style={{marginTop:30, fontSize:16}}>Cost Details</Txt>
            <CostDetailsCard courierPrice={"500"} deliveryandpartner={"300"} taxesandcharges={"100"} topay={"1,000"}/>
            <Txt font={"PoppinsBold"} style={{marginTop:30, fontSize:16}}>Payment Method</Txt>
+           <PaymentMethodCard/>
+           <Bttn text={"Confirm Booking"}/>
            </View>
            </ScrollView>
         </SafeAreaView>
