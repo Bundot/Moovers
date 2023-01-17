@@ -4,42 +4,30 @@ import Bttn from "../components/Bttn";
 import NoStyleBttn from "../components/NoStyleBttn";
 import Txt from "../components/Txt";
 
-export default function WelcomeScreen(){
+export default function WelcomeScreen({navigation}){
+
+    const onLogin = ()=> {
+        navigation.navigate("LoginScreen")
+      }
+
+      const onCreate = ()=> {
+        navigation.navigate("CreateAccountScreen")
+      }
     return(
         <SafeAreaView style={{paddingHorizontal: 26, backgroundColor:"#EEF3F5", flex: 1}}>
+            <View style={{ marginTop:30}}>
+            <Txt font={"PoppinsBold"} style={{color:"#F7B932", fontSize: 30}}>Welcome to Moover</Txt>
+            <Txt font={"PoppinsRegular"} style={{ fontSize: 16}}>Experience The next level of courier service</Txt>
+        </View>
         <View style={{alignItems:"center", marginTop: 200}}>
-            <Image  resizeMethod="resize" source={require('./../../assets/images/welcomeScreen.png')} />
+            <Image  resizeMethod="resize" source={require('./../../assets/images/welcomeScreenImg.png')} />
         </View>
-        <View style={{ marginTop:18}}>
-            <Txt font={"PoppinsBold"} style={{color:"#F7B932", fontSize: 30}}>Welcome</Txt>
-        </View>
-        <View style={{ marginTop: 1}}>
-            <Txt font={"PoppinsRegular"} style={{ fontSize: 16}}>Welcome to Moover. Please do have a wonderful experience while use our app.</Txt>
-        </View>
-
-        <View style={{flexDirection:"row", marginTop: 45}}>
-       <NoStyleBttn style={{
-        //backgroundColor: "#593761",
-        height: 37,
-        width: 145,
-        borderRadius: 15,
-        alignItems: "center",
-        justifyContent: "center",
-        borderColor:"#593761",
-        borderWidth: 1}} text={"Login"} txtStyle={{color:"#593761", fontSize:14}}/>
-
-        <NoStyleBttn style={{
-        backgroundColor: "#593761",
-        height: 37,
-        width: 145,
-        borderRadius: 15,
-        alignItems: "center",
-        justifyContent: "center",
-        marginLeft: 30
-        //borderColor:"#593761",
-       // borderWidth: 1
-        }} text={"Create Account"} txtStyle={{color:"white", fontSize:14}}/>
-        </View>
+        <Bttn text={"Log in"} onPress={onLogin}/>
+        <NoStyleBttn style={{height: 52,borderRadius: 15,alignItems: "center",justifyContent: "center",marginTop: 30, borderWidth:1, borderColor:"#593761"}} text={"Create Account"} txtStyle={{color:"#593761", fontSize:16}} onPress={onCreate}/>
     </SafeAreaView>
     )
 }
+
+
+
+

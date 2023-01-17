@@ -26,6 +26,8 @@ import SingleDeliveryScreen from './src/Screens/SingleDeliveryScreen';
 import OnboardingThree from './src/components/OnboardingThree';
 import OrderSummary from './src/Screens/OrderSummary';
 import HelpScreen from './src/Screens/HelpScreen';
+import PaymentScreen from './src/Screens/PaymentScreen';
+import CongratulationScreen from './src/Screens/CongratulationScreen';
 
 
 
@@ -57,6 +59,8 @@ export default function App() {
         <Stack.Screen name='OnboardingThree' component={OnboardingThree}/>
         <Stack.Screen name='OrderSummary' component={OrderSummary}/>
         <Stack.Screen name='HelpScreen' component={HelpScreen}/>
+        <Stack.Screen name='PaymentScreen' component={PaymentScreen}/>
+        <Stack.Screen name='CongratulationScreen' component={CongratulationScreen}/>
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -1,16 +1,15 @@
 import { View, Image} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import SkipBttn from "./SkipBttn";
 import SwipeNavOne from "./SwipeNavOne";
 import Txt from "./Txt";
 
 export default function OnboardingOne(){
     return (
         <SafeAreaView style={{paddingHorizontal: 26, backgroundColor:"white", flex: 1}}>
-            <View style={{alignItems:'flex-end', marginTop: 90}}>
-                <Txt font={"PoppinsBold"} style={{color:"#4361EE", fontSize: 14}}>Skip</Txt>
-            </View>
-            <View style={{alignItems:"center", marginTop: 32}}>
-                <Image  resizeMethod="resize" source={require('./../../assets/images/onboarding1.png')} />
+            <SkipBttn/>
+            <View style={{alignItems:"center", marginTop: 32, backgroundColor:"green", justifyContent:"center", overflow:"hidden", height:250, width:250, alignSelf:"center", borderRadius:125}}>
+                <Image  resizeMethod="resize" source={require('./../../assets/images/ImgOne.png')}/>
             </View>
             <View style={{alignItems:"center", marginTop:18}}>
                 <Txt font={"PoppinsBold"} style={{color:"#F7B932", fontSize: 16}}>Any where Any time</Txt>

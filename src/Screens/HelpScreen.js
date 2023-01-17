@@ -1,10 +1,11 @@
-import { View, Image, } from "react-native";
+import { View, Image, ScrollView} from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import ContactUsButton from "../components/ContactUsButton";
 import FaqsCard from "../components/FaqsCard";
 import RecommendedTopicsCard from "../components/RecommendedTopicsCard";
 import TopLineNav from "../components/TopLineNav";
 import Txt from "../components/Txt";
+import FaqsFlatList from "../flatLists/FaqsFlatList";
 
 export default function HelpScreen(){
     return(
@@ -26,7 +27,7 @@ export default function HelpScreen(){
                 </View>
                 <View>
                 <Txt font={"PoppinsBold"} style={{fontSize:16, marginLeft:24, marginTop:15}}>FAQ'S</Txt>
-                <FaqsCard/>
+                <FaqsFlatList/>
                 </View>
             </View>
         </SafeAreaView>

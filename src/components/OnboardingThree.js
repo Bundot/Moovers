@@ -6,20 +6,17 @@ import Txt from "./Txt";
 export default function OnboardingThree({navigation}){
     return(
         <SafeAreaView style={{paddingHorizontal: 26, backgroundColor:"white", flex: 1}}>
-        <TouchableOpacity style={{alignItems:'flex-end', marginTop: 90}} onSubmit={ ()=> navigation.navigate('WelcomeScreen')}>
-            <Txt font={"PoppinsBold"} style={{color:"#4361EE", fontSize: 14}}>Skip</Txt>
-        </TouchableOpacity>
-        <View style={{alignItems:"center", marginTop: 32}}>
-            <Image  resizeMethod="resize" source={require('./../../assets/images/onboarding3.png')} />
+        <View style={{alignItems:"center", marginTop: 122, backgroundColor:"green", justifyContent:"center", overflow:"hidden", height:250, width:250, alignSelf:"center", borderRadius:125}}>
+            <Image  resizeMethod="resize" source={require('./../../assets/images/ImgThree.png')} />
         </View>
         <View style={{alignItems:"center", marginTop:18}}>
-            <Txt font={"PoppinsBold"} style={{color:"#F7B932", fontSize: 16}}>Great Experience</Txt>
+            <Txt font={"PoppinsBold"} style={{color:"#F7B932", fontSize: 16}}>24/7 Service</Txt>
         </View>
         <View style={{alignItems:"center", marginTop: 15, paddingHorizontal: 39}}>
-            <Txt font={"PoppinsRegular"} style={{ fontSize: 16}}>Get The Bes Experience Ever</Txt>
+            <Txt font={"PoppinsRegular"} style={{ fontSize: 16}}>Experience the next level of</Txt>
         </View>
         <View style={{alignItems:"center", paddingHorizontal: 39}}>
-            <Txt font={"PoppinsRegular"} style={{ fontSize: 16}}>With Movers</Txt>
+            <Txt font={"PoppinsRegular"} style={{ fontSize: 16}}>courier service</Txt>
         </View>
         <View style={{marginTop: 50, alignItems:"center"}}>
             </View>

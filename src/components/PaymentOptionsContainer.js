@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { View, Text } from "react-native";
 import PaymentRadioButton from "./PaymentRadioButton";
-import RadioButton from "./RadioButton";
 
-export default function RadioButtonContainer({ values, onPress }) {
+export default function PaymentOptionsContainer({ values, onPress }) {
   const [currentSelectedItem, setCurrentSelectedItem] = useState(0);
 
   const _onPress = (idx) => {
@@ -14,13 +13,16 @@ export default function RadioButtonContainer({ values, onPress }) {
   const _renderRadioButtons = () => {
     return (values || []).map((listItem, idx) => {
       let isChecked = currentSelectedItem === idx ? true : false;
-      return (
-        <RadioButton
-          key={idx}
-          onRadioButtonPress={() => _onPress(idx)}
-          isChecked={isChecked}
-          text={listItem.text}
-          subtext={listItem.subtext}
+      return(
+        <PaymentRadioButton
+        key={idx}
+        onRadioButtonPress={() => _onPress(idx)}
+        isChecked={isChecked}
+        banknameandcard={listItem.banknameandcard}
+        expirydate={listItem.expirydate}
+        fullname={listItem.fullname}
+        image={listItem.image}
+        imgstyle={listItem.imgstyle}
         />
       );
     });

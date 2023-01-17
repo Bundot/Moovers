@@ -11,7 +11,11 @@ import AboutParcelInputA from "../components/AboutParcelInputA";
 import AboutParcelInputB from "../components/AboutParcelInputB";
 import Bttn from "../components/Bttn";
 
-export default function SingleDeliveryScreen(){
+export default function SingleDeliveryScreen({navigation}){
+
+    const onProceed = ()=> {
+        navigation.navigate("OrderSummary")
+      }
     return(
         <SafeAreaView style={{marginBottom:10, backgroundColor:"#EEF3F5"}}>
             <ScrollView>
@@ -32,7 +36,7 @@ export default function SingleDeliveryScreen(){
                 <AboutParcelInputA image={require('./../../assets/images/CalenderIcon.png')} placeholder={"28th Dec 2022"}/>
                 <AboutParcelInputB image={require('./../../assets/images/ClockIcon.png')} placeholder={"8:00am"}/>
             </View>
-            <Bttn text={"Proceed"}/>
+            <Bttn text={"Proceed"} onPress={onProceed}/>
             </View>
             </ScrollView>
         </SafeAreaView>

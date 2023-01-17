@@ -6,9 +6,12 @@ import { useRef } from 'react';
 import VerificationInputs from "../components/VerificationInputs";
 import Bttn from "../components/Bttn";
 
-export default function Verification({refs, onChangeText}){
+export default function Verification({refs, onChangeText, navigation}){
 
     const inputTwo = useRef();
+    const onVerify = ()=> {
+        navigation.navigate("LoginScreen")
+      }
     
     return(
         <SafeAreaView style={{paddingHorizontal:30, backgroundColor:"#EEF3F5"}}>
@@ -21,7 +24,7 @@ export default function Verification({refs, onChangeText}){
                     <VerificationInputs/>
                  </View>
                 <Txt font={"PoppinsRegular"} style={{alignSelf:"center", fontSize: 14, color: "#D27203", marginTop:30 }}>Resend in 58s</Txt>
-                <Bttn text={"Verify"}/>
+                <Bttn text={"Verify"} onPress={onVerify}/>
             </View>
             </ScrollView>
         </SafeAreaView>
