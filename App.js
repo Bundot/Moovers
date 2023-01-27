@@ -28,6 +28,12 @@ import OrderSummary from './src/Screens/OrderSummary';
 import HelpScreen from './src/Screens/HelpScreen';
 import PaymentScreen from './src/Screens/PaymentScreen';
 import CongratulationScreen from './src/Screens/CongratulationScreen';
+import ModeOfCourier from './src/Screens/ModeOfCourier';
+import SwipeTest from './src/Tests/SwipeTest';
+import TestingSwipeModal from './src/Tests/TestingSwipeModal';
+import PackersAndMovers from './src/Screens/PackersAndMovers';
+import SelectItemsScreen from './src/Screens/SelectItemsScreen';
+//import TestingSwipeModal from './src/Tests/TestingSwipeModal';
 
 
 
@@ -36,7 +42,7 @@ const Stack= createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='HelpScreen' screenOptions={{headerShown: false}}> 
+      <Stack.Navigator initialRouteName='SelectItemsScreen' screenOptions={{headerShown: false}}> 
         <Stack.Screen name='WelcomeScreen' component={WelcomeScreen}/>
         <Stack.Screen name='SwipeNav' component={SwipeNavOne}/>
         <Stack.Screen name='TestingSwippers' component={TestingSwippers}/>
@@ -61,6 +67,12 @@ export default function App() {
         <Stack.Screen name='HelpScreen' component={HelpScreen}/>
         <Stack.Screen name='PaymentScreen' component={PaymentScreen}/>
         <Stack.Screen name='CongratulationScreen' component={CongratulationScreen}/>
+        <Stack.Screen name='ModeOfCourier' component={ModeOfCourier}/>
+        <Stack.Screen name='SwipeTest' component={SwipeTest}/>
+        <Stack.Screen name='TestingSwipeModal' component={TestingSwipeModal}/>
+        <Stack.Screen name='PackersAndMovers' component={PackersAndMovers}/>
+        <Stack.Screen name='SelectItemsScreen' component={SelectItemsScreen}/>
+       
       </Stack.Navigator>
     </NavigationContainer>
   );
