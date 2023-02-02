@@ -33,6 +33,8 @@ import SwipeTest from './src/Tests/SwipeTest';
 import TestingSwipeModal from './src/Tests/TestingSwipeModal';
 import PackersAndMovers from './src/Screens/PackersAndMovers';
 import SelectItemsScreen from './src/Screens/SelectItemsScreen';
+import AddressDetailsScreen from './src/Screens/AddressDetailsScreen';
+import PackagesScreen from './src/Screens/PackageScreen';
 //import TestingSwipeModal from './src/Tests/TestingSwipeModal';
 
 
@@ -42,7 +44,7 @@ const Stack= createStackNavigator();
 export default function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName='SelectItemsScreen' screenOptions={{headerShown: false}}> 
+      <Stack.Navigator initialRouteName='PackagesScreen' screenOptions={{headerShown: false}}> 
         <Stack.Screen name='WelcomeScreen' component={WelcomeScreen}/>
         <Stack.Screen name='SwipeNav' component={SwipeNavOne}/>
         <Stack.Screen name='TestingSwippers' component={TestingSwippers}/>
@@ -72,6 +74,8 @@ export default function App() {
         <Stack.Screen name='TestingSwipeModal' component={TestingSwipeModal}/>
         <Stack.Screen name='PackersAndMovers' component={PackersAndMovers}/>
         <Stack.Screen name='SelectItemsScreen' component={SelectItemsScreen}/>
+        <Stack.Screen name='AddressDetailsScreen' component={AddressDetailsScreen}/>
+        <Stack.Screen name='PackagesScreen' component={PackagesScreen}/>
        
       </Stack.Navigator>
     </NavigationContainer>
