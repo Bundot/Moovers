@@ -9,7 +9,7 @@ export default function CheckBox({text}){
 
     return(
         <View style={{flexDirection: "row"}}>
-            <Checkbox value={isChecked} onValueChange={setChecked}/>
+            <Checkbox value={isChecked} onValueChange={setChecked} />
             <Txt font={"InterRegular"} style={{marginLeft: 5}}>{text}</Txt>
         </View>
     )

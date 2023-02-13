@@ -5,6 +5,8 @@ import SearchBox from '../components/SearchBox';
 import Services from '../components/Services';
 import TopLine from '../components/TopLine';
 import Txt from '../components/Txt';
+import SwipeUpDownModal from 'react-native-swipe-modal-up-down';
+
 
 export default function HomeScreen(){
     return(

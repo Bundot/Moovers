@@ -1,4 +1,4 @@
-import { View, Text, Image, StyleSheet, TouchableOpacity, Dimensions, Modal } from "react-native";
+import { View, Text, Image, StyleSheet, TouchableOpacity, Dimensions, Modal, PanResponder, Animated } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Txt from "./Txt";
 import React, { useState } from "react";
@@ -9,6 +9,7 @@ export default function Services({topic,image,description}){
       return(
         <SafeAreaView>
         <Modal
+        
         animationType="slide"
         transparent={true}
         visible={modalVisible}
