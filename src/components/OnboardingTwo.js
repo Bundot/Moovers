@@ -1,11 +1,13 @@
 import { View, Image } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { SafeAreaView } from "react-native-safe-area-context";
+import OnboardingThree from "./OnboardingThree";
 import SkipBttn from "./SkipBttn";
 import SwipeNavTwo from "./SwipeNavTwo";
 import Txt from "./Txt";
 
-export default function OnboardingTwo({navigation}){
+export default function OnboardingTwo(){
+
     return(
         <SafeAreaView style={{paddingHorizontal: 26, backgroundColor:"white", flex: 1}}>
        <SkipBttn/>

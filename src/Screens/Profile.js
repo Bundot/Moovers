@@ -8,7 +8,7 @@ import Txt from "../components/Txt";
 
 export default function Profile(){
     return(
-        <SafeAreaView style={{backgroundColor:"#EEF3F5"}}>
+        <SafeAreaView style={{backgroundColor:"#EEF3F5", flex:1}}>
             <EmptyTopLine text={"Profile"}/>
             <ScrollView showsVerticalScrollIndicator={false}>
             <View style={styles.containera}>

@@ -10,7 +10,7 @@ import SwipeUpDownModal from 'react-native-swipe-modal-up-down';
 
 export default function HomeScreen(){
     return(
-        <SafeAreaView style={{backgroundColor:"#EEF3F5", paddingBottom: 20}}>
+        <SafeAreaView style={{backgroundColor:"#EEF3F5", paddingBottom: 10}}>
             <ScrollView showsVerticalScrollIndicator={false}>
             <TopLine image={require('./../../assets/images/locationIcon.png')} address={"New Nyanya, Phase IV"} state={"Nassarawa State"}/>
             <View style={{paddingHorizontal: 20}}>
@@ -30,6 +30,7 @@ export default function HomeScreen(){
             <Services topic={"Courier"} image={require('./../../assets/images/courierImage.png')} description={"Door step pickup at your fingertips"}/>
             <Services topic={"Packers and Movers"} image={require('./../../assets/images/packersandmoversImage.png')} description={"Hassle free experience Affordable package"}/>
             <Services topic={"Quicky"} image={require('./../../assets/images/quickyImage.png')} description={"30 Mins Delivery Live Tracking"}/>
+            <View style={{height:50}}></View>
             </View>
             </ScrollView>
         </SafeAreaView>

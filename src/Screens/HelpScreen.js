@@ -10,6 +10,7 @@ import FaqsFlatList from "../flatLists/FaqsFlatList";
 export default function HelpScreen(){
     return(
         <SafeAreaView style={{flex:1}}>
+            <ScrollView>
             <TopLineNav text={"Help"}/>
             <View>
                 <Txt font={"PoppinsRegular"} style={{fontSize:16, marginTop: 20, paddingLeft:24, paddingRight:150}}>Communicate With us if you have quiries or dificulties</Txt>
@@ -30,6 +31,7 @@ export default function HelpScreen(){
                 <FaqsFlatList/>
                 </View>
             </View>
+            </ScrollView>
         </SafeAreaView>
     )
 }

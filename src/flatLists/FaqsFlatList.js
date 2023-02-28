@@ -15,6 +15,10 @@ const actions=[
         question:"Does your service has door step pick up",
         answer:"Yes",
     },
+    {
+        question:"Does your service has door step pick up",
+        answer:"Yes",
+    },
 ]
 
 export default function FaqsFlatList(){

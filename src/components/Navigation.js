@@ -34,29 +34,98 @@ function Profle(){
     )
 }
 
-function Icons(){
-    return(
-        <TestingNavBarIcons/>
-    )
-}
-
 const Tab = createBottomTabNavigator();
 
 export default function Navigation({state, descriptors, navigation}){
     return(
         
        <NavigationContainer independent={true}> 
-        <Tab.Navigator  sceneContainerStyle={{backgroundColor: "white"}} screenOptions={({route}) => ({
-            tabBarStyle: {borderRadius: 50, marginLeft: 50, marginRight: 50, marginBottom:10, backgroundColor:"white", position: "absolute" },
-            tabBarShowLabel: false,  
-                 
-        }
-            )}>
+        <Tab.Navigator  sceneContainerStyle={{backgroundColor: "white"}} 
+        screenOptions={({route}) => ({
+        tabBarStyle: {borderRadius: 50, marginLeft: 50, marginRight: 50, marginBottom:10, backgroundColor:"white", position: "absolute", paddingHorizontal:20},
+        tabBarShowLabel: false, 
+        activeTintColor: 'red',
+        inactiveTintColor: 'gray',
+        labelStyle: { fontSize: 12, flex: 1 },
+        style: { backgroundColor: 'white' },
+        tabStyle: { justifyContent: 'center', flexDirection: 'row', alignItems: 'center' },        
+        })}
+        >
+
+
             
-           <Tab.Screen name="Home" component={HomeScreen} options={{headerShown:false, }}/>
-           <Tab.Screen name="Bookins" component={Bookings} options={{headerShown: false}} />
-           <Tab.Screen name="Profle" component={Profile} options={{headerShown: false}} />
-           <Tab.Screen name='Icons' component={TestingNavBarIcons} options={{headerShown: false}}/>
+        <Tab.Screen name="Home" component={HomeScreen} options={{
+          headerShown: false,
+          tabBarIcon: ({ focused }) => (
+            <View style={{ flexDirection: 'row',
+            alignItems: 'center',
+            backgroundColor: focused ? '#D27203' : 'white',
+            paddingTop: focused ? 5 : 0,
+            paddingBottom: focused ? 5 : 0,
+            paddingRight: focused ? 30 : 0,
+            paddingLeft: focused ? 10 : 0,
+            borderRadius: focused ? 100 : 0}}>
+            <Image
+              source={require('./../../assets/images/pentagonIcon.png')}
+              style={{
+                width: 20,
+                height: 20,
+                tintColor: focused ? 'white' : '#D27203',
+              }}
+            />
+            {focused && (
+              <Text style={{ color: 'white', marginLeft: 5, fontSize:14 }}>Home</Text>
+            )}
+          </View>
+        ),
+        }}/>
+           <Tab.Screen name="Bookins" component={Bookings} options={{headerShown: false,
+            
+            tabBarIcon: ({ focused }) => (
+            <View style={{ flexDirection: 'row',
+            alignItems: 'center',
+            backgroundColor: focused ? '#D27203' : 'white',
+            paddingTop: focused ? 5 : 0,
+            paddingBottom: focused ? 5 : 0,
+            paddingRight: focused ? 30 : 0,
+            paddingLeft: focused ? 10 : 0,
+            borderRadius: focused ? 100 : 0}}>
+            <Image
+              source={require('./../../assets/images/bookinsNav.png')}
+              style={{
+                width: 20,
+                height: 20,
+                tintColor: focused ? 'white' : '#D27203',
+              }}
+            />
+            {focused && (
+              <Text style={{ color: 'white', marginLeft: 5, fontSize:13 }}>Bookings</Text>
+            )}
+          </View>
+        ),}} />
+           <Tab.Screen name="Profle" component={Profile} options={{headerShown: false,
+        tabBarIcon: ({ focused }) => (
+            <View style={{ flexDirection: 'row',
+            alignItems: 'center',
+            backgroundColor: focused ? '#D27203' : 'white',
+            paddingTop: focused ? 5 : 0,
+            paddingBottom: focused ? 5 : 0,
+            paddingRight: focused ? 30 : 0,
+            paddingLeft: focused ? 10 : 0,
+            borderRadius: focused ? 100 : 0}}>
+            <Image
+              source={require('./../../assets/images/Ppic.png')}
+              style={{
+                width: 20,
+                height: 20,
+                tintColor: focused ? 'white' : '#D27203',
+              }}
+            />
+            {focused && (
+              <Text style={{ color: 'white', marginLeft: 5, fontSize:13 }}>Profile</Text>
+            )}
+          </View>
+        )}} />
 
         </Tab.Navigator>
        </NavigationContainer>
