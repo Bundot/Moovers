@@ -1,11 +1,11 @@
 import { View, Text, TouchableOpacity, StyleSheet,Image } from "react-native";
 import Txt from "./Txt";
 
-export default function ModeOfCourierButton({text}){
+export default function ModeOfCourierButton({text, onPress}){
     return(
         <View style={styles.mainContainer}>
         <View style={styles.container}>
-            <TouchableOpacity style={styles.containera} >
+            <TouchableOpacity style={styles.containera} onPress={onPress} >
                 <Txt font={"PoppinsBold"} style={styles.txt}>{text}</Txt>
                 <Image source={require('./../../assets/images/SingleDeliveryBox.png')}/>
             </TouchableOpacity>

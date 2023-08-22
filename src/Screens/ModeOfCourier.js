@@ -5,7 +5,15 @@ import ModeOfCourierButton from "../components/ModeOfCourierButton";
 import Txt from "../components/Txt";
  
 
-export default function ModeOfCourier(){
+export default function ModeOfCourier({navigation}){
+
+    const singleDelivery = ()=> {
+        navigation.navigate("SingleDeliveryScreen")
+      }
+
+      const multipleDelivery = ()=> {
+        navigation.navigate("SingleDeliveryScreen")
+      }
 
         return(
                 <SafeAreaView style={{}}>
@@ -13,8 +21,8 @@ export default function ModeOfCourier(){
                 <View style={styles.topLine}></View>
                 <Txt font={"PoppinsRegular"} style={styles.header}>Please Select the mode of courier</Txt>
                 <View style={{marginBottom:20}}>
-                <ModeOfCourierButton text={"Single Delivery"}/>
-                <ModeOfCourierButton text={"Multiple Delivery"}/>
+                <ModeOfCourierButton text={"Single Delivery"} onPress={singleDelivery} />
+                <ModeOfCourierButton text={"Multiple Delivery"} onPress={multipleDelivery} />
                 </View>
                 </View>
             </SafeAreaView>

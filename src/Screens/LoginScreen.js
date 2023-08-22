@@ -18,7 +18,15 @@ const validationSchema= Yup.object().shape({
 
 export default function LoginScreen({navigation}){
     const onFormSubmit = ()=> {
-      navigation.navigate("HomeScreen")
+      navigation.navigate("Navigation")
+    }
+
+    const onSignUp = ()=> {
+      navigation.navigate("CreateAccountScreen")
+    }
+
+    const onForgotPassword = ()=> {
+      navigation.navigate("ResetPassword")
     }
     return(
             <SafeAreaView style={styles.container}>
@@ -30,7 +38,7 @@ export default function LoginScreen({navigation}){
               <Entypo name="chevron-thin-left" size={15} color="#2D264B" style={styles.arrow}/>
               </View>
               <TouchableOpacity>
-              <Txt font={"PoppinsBold"} style={styles.sutxt} >Sign Up</Txt>
+              <Txt font={"PoppinsBold"} style={styles.sutxt} onPress={onSignUp}>Sign Up</Txt>
               </TouchableOpacity>
               <Txt font={"PoppinsBold"} style={styles.wbtxt}>Welcome Back!</Txt>
               <Formik initialValues={{email:"", password:""}}
@@ -43,7 +51,7 @@ export default function LoginScreen({navigation}){
               <UsersPasswordInput onChangeText={handleChange("password")}/>
               <Text style={styles.errors}>{touched.password && errors.password}</Text>
               <TouchableOpacity>
-              <Txt font={"PoppinsRegular"} style={styles.forgotPassword}>Forgot Password?</Txt>
+              <Txt font={"PoppinsRegular"} style={styles.forgotPassword} onPress={onForgotPassword}>Forgot Password?</Txt>
               </TouchableOpacity>
                <Bttn text={"Login"} onPress={handleSubmit}/>
                             </>

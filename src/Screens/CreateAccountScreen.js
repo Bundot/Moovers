@@ -32,7 +32,7 @@ export default function CreateAccountScreen({ navigation }){
               <Entypo name="chevron-thin-left" size={15} color="#2D264B" style={{ width: 30, marginTop: -50, marginLeft: 5}}/>
               </View>
               <TouchableOpacity  style={{marginTop: 50}} onPress={onFormSubmit}>
-              <Txt font={"PoppinsBold"} style={{fontSize:15, color:"#D27203", alignSelf:"flex-end"}}>Sign Up</Txt>
+              <Txt font={"PoppinsBold"} style={{fontSize:15, color:"#D27203", alignSelf:"flex-end"}}>Login</Txt>
               </TouchableOpacity>
               <Formik initialValues={{fullname:"", email:"", phoneNumber:"", phoneNumber:""}}
                         onSubmit={onFormSubmit}

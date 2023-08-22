@@ -1,6 +1,7 @@
 import {View, ScrollView, StyleSheet, Text, Image} from 'react-native';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Offers from '../components/Offers';
+import { useNavigation } from '@react-navigation/native';
 import SearchBox from '../components/SearchBox';
 import Services from '../components/Services';
 import TopLine from '../components/TopLine';
@@ -12,7 +13,7 @@ export default function HomeScreen(){
     return(
         <SafeAreaView style={{backgroundColor:"#EEF3F5", paddingBottom: 10}}>
             <ScrollView showsVerticalScrollIndicator={false}>
-            <TopLine image={require('./../../assets/images/locationIcon.png')} address={"New Nyanya, Phase IV"} state={"Nassarawa State"}/>
+            <TopLine image={require('./../../assets/images/locationIcon.png')} address={"New Nyanya, Phase IV"} state={"Nassarawa State"}  onpress={() => navigation.navigate('Nutification')}/>
             <View style={{paddingHorizontal: 20}}>
             <Txt font={"PoppinsBold"} style={{fontSize:16, marginTop:20}}>Tracking your Courier</Txt>
             <SearchBox/>

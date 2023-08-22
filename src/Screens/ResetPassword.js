@@ -4,8 +4,18 @@ import {Entypo} from '@expo/vector-icons';
 import Txt from "../components/Txt";
 import UsersInput from "../components/UsersInput";
 import Bttn from "../components/Bttn";
+import { Form, Formik } from 'formik';
+import * as Yup from "yup";
 
-export default function ResetPassword(){
+const validationSchema= Yup.object().shape({
+    email: Yup.string().required("email address is required").email().label("Email Address"),
+  })
+
+export default function ResetPassword({navigation}){
+
+    const onFormSubmit = ()=>{
+        navigation.navigate("Verification")
+    }
     return(
         <SafeAreaView style={{flex:1, paddingHorizontal: 30, backgroundColor:"#EEF3F5"}}>
             <ScrollView showsVerticalScrollIndicator={false}>
@@ -18,9 +28,28 @@ export default function ResetPassword(){
               <Image source={require('./../../assets/images/resetPasswordPageImage.png')} style={{alignSelf:"center"}}/>
               <Txt font={"PoppinsBold"} style={{alignSelf:"center"}}>Enter Your email address to receive</Txt>
               <Txt font={"PoppinsBold"} style={{alignSelf:"center"}}>4 digit code to reset password.</Txt>
-              <UsersInput image={require('./../../assets/images/emailIcon.png')}/>
-              <Bttn text={"Send Code"}/>
+              <Formik initialValues={{email:""}}
+                        validationSchema={validationSchema}
+                        onSubmit={onFormSubmit}>
+                          {({handleChange, handleSubmit, errors, touched})=>(
+                            <>
+              <UsersInput image={require('./../../assets/images/emailIcon.png')} onChangeText={handleChange("email")}/>
+              <Text style={styles.errors}>{touched.email && errors.email}</Text>
+              <Bttn text={"Send Code"} onPress={handleSubmit}/>
+              </>
+                          )}
+                        </Formik>
+            
               </ScrollView>
         </SafeAreaView>
     )
 }
+
+const styles = StyleSheet.create({
+    errors: {
+    color: "red",
+      fontSize: 12,
+      fontWeight: "bold",
+      letterSpacing: 0.2
+    },
+})

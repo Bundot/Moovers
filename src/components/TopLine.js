@@ -1,8 +1,11 @@
-import { View, StyleSheet, Text, Image} from "react-native";
+import { View, StyleSheet, Text, Image, TouchableOpacity} from "react-native";
+import { useNavigation } from "@react-navigation/native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Txt from "./Txt";
+import Notifications from "../Screens/Notifications";
 
 export default function TopLine({image, address, state}){
+    const navigation = useNavigation();
     return(
         <View style={styles.container}>
                 <Image source={image}/>
@@ -10,7 +13,9 @@ export default function TopLine({image, address, state}){
                 <Txt font={"PoppinsRegular"} style={styles.txt}>{address}</Txt>
                 <Txt font={"PoppinsRegular"} style={styles.txt}>{state}</Txt>
             </View>
+            <TouchableOpacity onPress={() => navigation.navigate('Notifications')}>
                 <Image source={require('./../../assets/images/notificationIcon.png')}/>
+                </TouchableOpacity>
         </View>
     )
 }

@@ -17,7 +17,6 @@ import Verification from './src/Screens/Verification';
 import TestingFormFields from './src/Tests/TestingFormFields';
 import NewPassword from './src/Screens/NewPassword';
 import HomeScreen from './src/Screens/HomeScreen';
-import Notification from './src/Screens/Notification';
 import Bookings from './src/Screens/Bookings';
 import Profile from './src/Screens/Profile';
 import AccountSettings from './src/Screens/AccountSettings';
@@ -38,6 +37,8 @@ import PackagesScreen from './src/Screens/PackageScreen';
 import SummaryScreen from './src/Screens/SummaryScreen';
 import QuickyScreen from './src/Screens/QuickyScreen';
 import CourierTrackingScreen from './src/Screens/CourierTrackingScreen';
+import Notifications from './src/Screens/Notifications';
+import TopLine from './src/components/TopLine';
 //import TestingSwipeModal from './src/Tests/TestingSwipeModal';
 
 
@@ -60,7 +61,7 @@ export default function App() {
         <Stack.Screen name='TestingFormFields' component={TestingFormFields}/>
         <Stack.Screen name='NewPassword' component={NewPassword}/>
         <Stack.Screen name='HomeScreen' component={HomeScreen}/>
-        <Stack.Screen name='Notification' component={Notification}/>
+        <Stack.Screen name='Notifications' component={Notifications}/>
         <Stack.Screen name='Bookings' component={Bookings}/>
         <Stack.Screen name='Profile' component={Profile}/>
         <Stack.Screen name='AccountSettings' component={AccountSettings}/>
@@ -82,6 +83,7 @@ export default function App() {
         <Stack.Screen name='SummaryScreen' component={SummaryScreen}/>
         <Stack.Screen name='QuickyScreen' component={QuickyScreen}/>
         <Stack.Screen name='CourierTrackingScreen' component={CourierTrackingScreen}/>
+        <Stack.Screen name='TopLine' component={TopLine}/>
        
       </Stack.Navigator>
     </NavigationContainer>
